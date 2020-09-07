@@ -1,0 +1,24 @@
+.basket_miniature {
+  height: 30px;
+  width: 30px;
+  background-position: center center;
+  background-size: auto 100%;
+}
+.table_box {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 40vh;
+}
+
+.customer_number_heading .customer_name_heading {
+  margin: 0;
+  border: 0;
+  margin: 0;
+}
+.customer_name_heading {
+  margin-top: 12px;
+}
+
+.checkout_button {
+  margin: 12px;
+}

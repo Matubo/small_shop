@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid black;
+}
+.menu_item {
+  width: 20vw;
+  margin: auto;
+}
+
+.basket_img {
+  margin: 10px;
+  height: 5vh;
+}
+
+.basket_body {
+  width: 22vw;
+  background-color: wheat;
+  position: absolute;
+  transform-origin: 0 0;
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+  z-index: 10000;
+}
