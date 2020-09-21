@@ -3,8 +3,8 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import MenuSpace from "./features/elements/reactElements/menu";
-
 import StoreSpace from "./features/elements/reactElements/storeSpace";
+import Footer from "./features/elements/reactElements/footer";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <MenuSpace />
       <StoreSpace />
-      {/* <Footer> */}
+      <Footer />
     </div>
   );
 }

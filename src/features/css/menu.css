@@ -1,25 +1,82 @@
+.menu_ident {
+  height: 8vh;
+}
 .menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-around;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #666;
+  height: 8vh;
+  background-color: #666;
 }
 .menu_item {
-  width: 20vw;
-  margin: auto;
+  width: 25vw;
+  border-left: 1px solid #ddd;
 }
 
+.menu_logo {
+  height: 7vh;
+}
+.logo_box {
+  width: 20vw;
+  height: 7vh;
+  margin: auto;
+  background-color: #eee;
+  border-radius: 7px;
+  margin: auto;
+}
 .basket_img {
   margin: 10px;
   height: 5vh;
 }
-
-.basket_body {
-  width: 22vw;
-  background-color: wheat;
+.menu_heading_text {
+  margin: auto;
+}
+.menu_text_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.transform_body {
   position: absolute;
   transform-origin: 0 0;
   transform: scaleY(0);
   transition: all 0.5s ease-in-out;
   z-index: 10000;
+}
+.about_box {
+  width: 100vw;
+  background-color: #eee;
+  left: 0;
+}
+.about_flex {
+  display: flex;
+  justify-content: space-around;
+}
+.column_flex {
+  flex-direction: column;
+}
+.social_network_flex {
+  display: flex;
+  justify-content: space-around;
+}
+.social_network_icon {
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  background-position: center center;
+  background-size: auto 100%;
+}
+.social_network_card p {
+  text-align: center;
+}
+.line {
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid black;
 }

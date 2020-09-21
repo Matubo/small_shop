@@ -1,5 +1,6 @@
 function input_validation(name, number) {
   let reg_number = /^[78]9[0-9]{9}$/; //проверяем что в начале 7 или 8 потом 9 и 9 цифр
+  let reg_name = /[0-9]/;
   let feedback = {
     flag: true,
     name: {
@@ -19,7 +20,12 @@ function input_validation(name, number) {
     feedback.flag = false;
     feedback.name.message = "Превышена длинна строки";
   } else {
-    feedback.name.data = name;
+    if (reg_name.test(name)) {
+      feedback.flag = false;
+      feedback.name.message = "Неверный формат данных";
+    } else {
+      feedback.name.data = name;
+    }
   }
   if (!number) {
     feedback.flag = false;

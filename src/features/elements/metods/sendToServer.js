@@ -10,11 +10,11 @@ async function sendSQLData(name, number, order_data) {
       "Content-Type": "application/json", //вид отсылаемых данных
     },
     body: JSON.stringify({ data: json }),
-  }); //данные //!временно безсмысленные
+  });
   if (response.ok) {
     json = await response.json(); //ответ парсим из джсон и получаем
     console.log(json); //выводим ответ
-    console.log("Успешно!"); //выводим ответ //!временно
+    console.log(json);
   } else {
     console.log(`error ${response.status}`);
   }

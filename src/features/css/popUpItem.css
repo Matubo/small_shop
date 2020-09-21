@@ -1,0 +1,34 @@
+#popUp {
+  display: fixed;
+}
+.popup-overlay {
+  /* это контент из popup модуля */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popUp_img {
+  height: 15vh;
+  background-position: center center;
+  background-size: auto 100%;
+  border-radius: 20px;
+}
+.popUp_body {
+  height: 40vh;
+  width: 40vw;
+  top: 50%;
+  right: 50%;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.popUp_flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.popUp_name,
+.popUp_info,
+.popUp_price {
+  text-align: center;
+}

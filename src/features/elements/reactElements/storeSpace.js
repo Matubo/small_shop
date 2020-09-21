@@ -1,8 +1,12 @@
 import { useState, useReducer, useEffect } from "react";
+import ReactDOM from "react-dom";
 import React from "react";
 import getSQLData from "../metods/responseToServer";
+import Popup from "reactjs-popup";
 import basket from "../store";
+
 import "../../css/storeSpace.css";
+import "../../css/popUpItem.css";
 
 function createCardsDom(prodArr) {
   let cardsDOM = [];
@@ -28,6 +32,35 @@ function createCardsDom(prodArr) {
           >
             +
           </button>
+          <Popup
+            trigger={
+              <button className="btn btn-secondary card_btn"> i </button>
+            }
+            modal
+          >
+            <div className="popUp_body">
+              <div className="popUp_flex">
+                <div
+                  className="popUp_img"
+                  style={{
+                    backgroundImage: `url(http://localhost:3005/images/${prodArr[i]["img"]})`,
+                  }}
+                ></div>
+                <p className="popUp_name"> {prodArr[i]["name"]} </p>
+                <p className="popUp_info"> {prodArr[i]["info"]} </p>
+                <p className="popUp_price"> {prodArr[i]["price"]} руб.</p>
+                <button
+                  type="button"
+                  className="btn btn-secondary card_btn"
+                  onClick={() => {
+                    basket.dispatch({ type: "ADD", added: prodArr[i] });
+                  }}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </Popup>
         </div>
       </div>
     );
@@ -41,45 +74,62 @@ function App() {
   let [cardsDOM, setCardsDOM] = useState("empty");
   let [startId, setStartId] = useState(0);
   useEffect(() => {
-    getSQLData(startId).then((res) => setCardsDOM(createCardsDom(res)));
+    getSQLData(startId).then((res) => {
+      if (res.status) {
+        setCardsDOM(createCardsDom(res.data));
+      } else {
+        setCardsDOM(<div>{res.data}</div>);
+      }
+    });
   }, []);
 
   return (
-    //<DeleteFromApp/>
     <div className="app">
       {cardsDOM}
-      <button
-        id="prevButton"
-        onClick={() => {
-          if (startId > 5) {
-            document.getElementById("prevButton").disabled = true;
-            getSQLData(startId - 6).then((res) => {
-              setStartId(startId - 6);
-              setCardsDOM(createCardsDom(res));
-              document.getElementById("prevButton").disabled = false;
-            });
-          }
-        }}
-      >
-        prev
-      </button>
-      <button
-        id="nextButton"
-        onClick={() => {
-          document.getElementById("nextButton").disabled = true;
-          getSQLData(startId + 6).then((res) => {
-            if (res.length > 1) {
-              setCardsDOM(createCardsDom(res));
-              setStartId(startId + 6);
-              document.getElementById("nextButton").disabled = false;
-            } else {
-              document.getElementById("nextButton").disabled = false;
+      <div className="products_button_box">
+        <button
+          id="prevButton"
+          className="btn btn-secondary"
+          onClick={() => {
+            if (startId > 8) {
+              document.getElementById("prevButton").disabled = true;
+              getSQLData(startId - 9).then((res) => {
+                if (res.status) {
+                  setStartId(startId - 9);
+                  setCardsDOM(createCardsDom(res.data));
+                  document.getElementById("prevButton").disabled = false;
+                } else {
+                  setCardsDOM(<div>{res.data}</div>);
+                }
+              });
             }
-          });
-        }}
-      >
-        next
-      </button>
+          }}
+        >
+          prev
+        </button>
+        <button
+          id="nextButton"
+          className="btn btn-secondary"
+          onClick={() => {
+            document.getElementById("nextButton").disabled = true;
+            getSQLData(startId + 9).then((res) => {
+              if (res.status) {
+                if (res.data.length > 1) {
+                  setCardsDOM(createCardsDom(res.data));
+                  setStartId(startId + 9);
+                  document.getElementById("nextButton").disabled = false;
+                } else {
+                  document.getElementById("nextButton").disabled = false;
+                }
+              } else {
+                setCardsDOM(<div>{res.data}</div>);
+              }
+            });
+          }}
+        >
+          next
+        </button>
+      </div>
     </div>
   );
 }

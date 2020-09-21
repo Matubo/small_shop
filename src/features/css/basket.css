@@ -4,12 +4,28 @@
   background-position: center center;
   background-size: auto 100%;
 }
+.basket_body {
+  width: 25vw;
+  background-color: #eee;
+}
+.basket_popUp {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 10px;
+}
 .table_box {
   overflow: auto;
   overflow-x: hidden;
   max-height: 40vh;
 }
-
+.table {
+  margin: 0;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+}
+.table td {
+  background-color: white;
+}
 .customer_number_heading .customer_name_heading {
   margin: 0;
   border: 0;
@@ -20,5 +36,18 @@
 }
 
 .checkout_button {
-  margin: 12px;
+  margin: 5px;
+}
+.basket_button_flex {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.basket_button_trash {
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 24px;
+  width: 15px;
 }
