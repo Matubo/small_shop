@@ -10,12 +10,24 @@
   justify-content: space-around;
   text-align: center;
   border: 1px solid #666;
+  border-bottom: 0px;
   height: 8vh;
   background-color: #666;
 }
 .menu_item {
   width: 25vw;
   border-left: 1px solid #ddd;
+}
+.map_box {
+  margin-bottom: 10px;
+}
+iframe {
+  height: 0px;
+  width: 0px;
+  margin: auto;
+}
+.map_box {
+  height: 150px;
 }
 
 .menu_logo {
@@ -35,6 +47,7 @@
 }
 .menu_heading_text {
   margin: auto;
+  color: white;
 }
 .menu_text_box {
   height: 100%;

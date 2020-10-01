@@ -92,14 +92,16 @@ function Contacts() {
           <p>10.00 - 18.00</p>
         </div>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.1328579568744!2d30.330041115829804!3d59.91334238186698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963051690b4d6f%3A0xc856e39dc0512ae5!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0J7QsdCy0L7QtNC90L7Qs9C-INC60LDQvdCw0LvQsCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1600603698608!5m2!1sru!2sru"
-        style={{
-          width: "600",
-          height: "450",
-          border: "0",
-        }}
-      ></iframe>
+      <div className="map_box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.1328579568744!2d30.330041115829804!3d59.91334238186698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963051690b4d6f%3A0xc856e39dc0512ae5!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0J7QsdCy0L7QtNC90L7Qs9C-INC60LDQvdCw0LvQsCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1600603698608!5m2!1sru!2sru"
+          style={{
+            width: "600",
+            height: "450",
+            border: "0",
+          }}
+        ></iframe>
+      </div>
     </div>
   );
 }
@@ -108,15 +110,18 @@ function Menu() {
   useEffect(() => {
     let trigger = document.getElementsByClassName("transform_trigger");
     let body = document.getElementsByClassName("transform_body");
+    let map = document.querySelector("iframe");
     for (let i = 0; i < trigger.length; i++) {
       trigger[i].onmouseover = function (event) {
         console.log(1);
         body[i].style.cssText = "transform:scaleY(1)";
+        map.style.cssText = "height: 150px;width: 250px";
         /* event.target: внутренний элемент (всплыло) */
       };
       trigger[i].onmouseout = function (event) {
         console.log(2);
         body[i].style.cssText = "transform:scaleY(0)";
+        map.style.cssText = "height: 0;width: 0";
         /* event.target: внешний элемент */
       };
     }
@@ -134,7 +139,7 @@ function Menu() {
         </div>
         <div className="menu_item transform_trigger">
           <div className="menu_text_box">
-            <p className="menu_heading_text">О нас</p>
+            <h5 className="menu_heading_text">О нас</h5>
           </div>
           <div className="transform_body about_box">
             <About />
@@ -142,7 +147,7 @@ function Menu() {
         </div>
         <div className="menu_item transform_trigger">
           <div className="menu_text_box">
-            <p className="menu_heading_text">Контакты</p>
+            <h5 className="menu_heading_text">Контакты</h5>
           </div>
           <div className="transform_body about_box">
             <Contacts />

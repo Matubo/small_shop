@@ -5,6 +5,7 @@ import store from "../store";
 import sendSQLData from "../metods/sendToServer";
 import input_validation from "../metods/input_validation";
 import "../../css/basket.css";
+import "../../css/basket.scss";
 
 function createBasketDOM(basket, sum) {
   if (basket.length == 0) {

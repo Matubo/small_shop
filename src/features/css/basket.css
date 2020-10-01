@@ -7,6 +7,7 @@
 .basket_body {
   width: 25vw;
   background-color: #eee;
+  top: 8vh;
 }
 .basket_popUp {
   background-color: #eee;
