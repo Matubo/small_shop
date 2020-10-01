@@ -31,11 +31,11 @@ iframe {
 }
 
 .menu_logo {
-  height: 7vh;
+  max-height: 7vh;
+  max-width: 100%;
 }
 .logo_box {
   width: 20vw;
-  height: 7vh;
   margin: auto;
   background-color: #eee;
   border-radius: 7px;
