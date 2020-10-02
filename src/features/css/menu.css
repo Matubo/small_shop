@@ -66,6 +66,8 @@ iframe {
   width: 100vw;
   background-color: #eee;
   left: 0;
+  overflow-x: hidden;
+  max-height: 60vh;
 }
 .about_flex {
   display: flex;
@@ -92,4 +94,162 @@ iframe {
   height: 100%;
   width: 1px;
   border-left: 1px solid black;
+}
+/* планшеты */
+@media only screen and (max-width: 1920px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 2em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-height: 1920px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 2em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+/*айфоны большие и другие */
+@media only screen and (max-width: 824px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 1.25em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-height: 824px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 1.05em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+/*  surface  */
+@media only screen and (max-width: 720px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 1.25em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-height: 720px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+/* маленькие айфоны и другие */
+@media only screen and (max-width: 735px) and (max-height: 413px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 413px) and (max-height: 735px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-max-device-pixel-ratio: 3) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+/* малыши */
+@media only screen and (max-width: 380px) and (max-height: 330px) and (orientation: landscape) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 330px) and (max-height: 380px) and (orientation: portrait) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+/* странный */
+@media only screen and (max-height: 280px) and (orientation: landscape) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  .menu h5 {
+    font-size: 1em !important;
+  }
+  .basket_body {
+    left: 0;
+    width: 100%;
+  }
+  .about_flex,
+  .social_network_flex {
+    flex-direction: column;
+  }
 }
