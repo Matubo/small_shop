@@ -5,7 +5,6 @@ import store from "../store";
 import sendSQLData from "../metods/sendToServer";
 import input_validation from "../metods/input_validation";
 import "../../css/basket.css";
-import "../../css/basket.scss";
 
 function createBasketDOM(basket, sum) {
   if (basket.length == 0) {
@@ -19,7 +18,7 @@ function createBasketDOM(basket, sum) {
           <div
             className="basket_miniature"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/${basket[i]["img"]})`,
+              backgroundImage: `url(/images/${basket[i]["img"]})`,
             }}
           ></div>
         </td>
@@ -30,7 +29,7 @@ function createBasketDOM(basket, sum) {
           <button
             className="btn btn-light basket_button_trash"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/trash.png)`,
+              backgroundImage: `url(/images/icon/trash.png)`,
             }}
             onClick={() => {
               store.dispatch({ type: "REMOVE", remove: basket[i] });

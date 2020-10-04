@@ -20,7 +20,7 @@ function About() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/instagram.png)`,
+              backgroundImage: `url(/images/icon/instagram.png)`,
             }}
           ></div>
           <p>ybei_skyky</p>
@@ -29,7 +29,7 @@ function About() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/vk.png)`,
+              backgroundImage: `url(/images/icon/vk.png)`,
             }}
           ></div>
           <p>убей скуку</p>
@@ -38,7 +38,7 @@ function About() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/facebook.png)`,
+              backgroundImage: `url(/images/icon/facebook.png)`,
             }}
           ></div>
           <p>ybei_skyky</p>
@@ -57,7 +57,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/landline.png)`,
+              backgroundImage: `url(/images/icon/landline.png)`,
             }}
           ></div>
           <p>+7-999-777-77-77</p>
@@ -66,7 +66,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/email.png)`,
+              backgroundImage: `url(/images/icon/email.png)`,
             }}
           ></div>
           <p>support@ybeiskyky.com</p>
@@ -75,7 +75,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/home.png)`,
+              backgroundImage: `url(/images/icon/home.png)`,
             }}
           ></div>
           <p>СПБ Наб. Обводного канала</p>
@@ -85,7 +85,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(http://localhost:3005/images/icon/time.png)`,
+              backgroundImage: `url(/images/icon/time.png)`,
             }}
           ></div>
           <p>Каждый день</p>
@@ -115,13 +115,17 @@ function Menu() {
       trigger[i].onmouseover = function (event) {
         console.log(1);
         body[i].style.cssText = "transform:scaleY(1)";
-        map.style.cssText = "height: 150px;width: 250px";
+        if (i == 1) {
+          map.style.cssText = "height: 150px;width: 250px";
+        }
         /* event.target: внутренний элемент (всплыло) */
       };
       trigger[i].onmouseout = function (event) {
         console.log(2);
         body[i].style.cssText = "transform:scaleY(0)";
-        map.style.cssText = "height: 0;width: 0";
+        if (i == 1) {
+          map.style.cssText = "height: 0;width: 0";
+        }
         /* event.target: внешний элемент */
       };
     }
@@ -132,10 +136,7 @@ function Menu() {
       <div className="menu_ident"></div>
       <div className="menu">
         <div className="menu_item logo_box">
-          <img
-            className="menu_logo"
-            src="http://localhost:3005/images/logo/logo.png"
-          ></img>
+          <img className="menu_logo" src="/images/logo/logo.png"></img>
         </div>
         <div className="menu_item transform_trigger">
           <div className="menu_text_box">

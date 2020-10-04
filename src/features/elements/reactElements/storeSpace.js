@@ -17,7 +17,7 @@ function createCardsDom(prodArr) {
         <div
           className="card_img"
           style={{
-            backgroundImage: `url(http://localhost:3005/images/${prodArr[i]["img"]})`,
+            backgroundImage: `url(/images/${prodArr[i]["img"]})`,
           }}
         ></div>
         <div className="card-body">
@@ -43,7 +43,7 @@ function createCardsDom(prodArr) {
                 <div
                   className="popUp_img"
                   style={{
-                    backgroundImage: `url(http://localhost:3005/images/${prodArr[i]["img"]})`,
+                    backgroundImage: `url(/images/${prodArr[i]["img"]})`,
                   }}
                 ></div>
                 <p className="popUp_name"> {prodArr[i]["name"]} </p>

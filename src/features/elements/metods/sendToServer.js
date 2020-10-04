@@ -1,4 +1,4 @@
-let url = "http://localhost:3005/SENDSQLDATA"; //адрес сервера/адрес запроса
+let url = "/SENDSQLDATA"; //адрес сервера/адрес запроса
 
 async function sendSQLData(name, number, order_data) {
   let json = JSON.stringify({ name, number, order_data });

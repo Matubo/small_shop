@@ -13,6 +13,7 @@
   background-color: #eee;
   padding: 10px;
   border-radius: 10px;
+  z-index: 1002;
 }
 .table_box {
   overflow: auto;

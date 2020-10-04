@@ -1,4 +1,4 @@
-let url = "http://localhost:3005/GETSQLDATA"; //адрес сервера/адрес запроса
+let url = "/GETSQLDATA"; //адрес сервера/адрес запроса
 
 async function getSQLData(id) {
   let json;
