@@ -4,6 +4,25 @@ import sendSQLData from "../metods/sendToServer";
 import input_validation from "../metods/input_validation";
 import store from "../store";
 
+function checkout() {
+  let name = document.getElementsByClassName("customer_name")[0].value;
+  let number = document.getElementsByClassName("customer_number")[0].value;
+  let feedbackData = input_validation(name, number); //отправляем данные на проверку, возвращается в виде объекта с ответом и //!отформатированными данными
+  if (!feedbackData.correctnessFlag) {
+    document.getElementsByClassName("form_name_feedback")[0].innerHTML =
+      feedbackData.name.message;
+    document.getElementsByClassName("form_number_feedback")[0].innerHTML =
+      feedbackData.number.message;
+  } else {
+    sendSQLData(
+      feedbackData.name.data,
+      feedbackData.number.data,
+      store.getState()
+    );
+    store.dispatch({ type: "CLEAR_ALL" });
+  }
+}
+
 function ReturnBasketPopup() {
   return (
     <Popup
@@ -20,28 +39,7 @@ function ReturnBasketPopup() {
 
         <button
           className="btn btn-secondary checkout_button"
-          onClick={() => {
-            let name = document.getElementsByClassName("customer_name")[0]
-              .value;
-            let number = document.getElementsByClassName("customer_number")[0]
-              .value;
-            let data_feedback = input_validation(name, number); //отправляем данные на проверку, возвращается в виде объекта с ответом и //!отформатированными данными
-            if (!data_feedback.flag) {
-              document.getElementsByClassName(
-                "form_name_feedback"
-              )[0].innerHTML = data_feedback.name.message;
-              document.getElementsByClassName(
-                "form_number_feedback"
-              )[0].innerHTML = data_feedback.number.message;
-            } else {
-              sendSQLData(
-                data_feedback.name.data,
-                data_feedback.number.data,
-                store.getState()
-              );
-              store.dispatch({ type: "CLEAR_ALL" });
-            }
-          }}
+          onClick={() => checkout()}
         >
           Оформить
         </button>
