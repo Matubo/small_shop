@@ -49,6 +49,7 @@ function createCardsDom(prodArr) {
                 <p className="popUp_name"> {prodArr[i]["name"]} </p>
                 <p className="popUp_info"> {prodArr[i]["info"]} </p>
                 <p className="popUp_price"> {prodArr[i]["price"]} руб.</p>
+
                 <button
                   type="button"
                   className="btn btn-secondary card_btn"
