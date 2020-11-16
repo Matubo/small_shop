@@ -20,12 +20,12 @@
   overflow-x: hidden;
   max-height: 40vh;
 }
-.table {
+.table_body {
   margin: 0;
   border-left: 2px solid #eee;
   border-right: 2px solid #eee;
 }
-.table td {
+.table_body td {
   background-color: white;
 }
 .customer_number_heading .customer_name_heading {
