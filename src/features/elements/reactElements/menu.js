@@ -1,4 +1,4 @@
-import { useState, useReducer, useEffect } from "react";
+import { useEffect } from "react";
 import React from "react";
 import Basket from "./basket";
 import "../../css/menu.css";
@@ -92,16 +92,6 @@ function Contacts() {
           <p>10.00 - 18.00</p>
         </div>
       </div>
-      <div className="map_box">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.1328579568744!2d30.330041115829804!3d59.91334238186698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963051690b4d6f%3A0xc856e39dc0512ae5!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0J7QsdCy0L7QtNC90L7Qs9C-INC60LDQvdCw0LvQsCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1600603698608!5m2!1sru!2sru"
-          style={{
-            width: "600",
-            height: "450",
-            border: "0",
-          }}
-        ></iframe>
-      </div>
     </div>
   );
 }
@@ -115,18 +105,10 @@ function Menu() {
       trigger[i].onmouseover = function (event) {
         console.log(1);
         body[i].style.cssText = "transform:scaleY(1)";
-        if (i == 1) {
-          map.style.cssText = "height: 150px;width: 250px";
-        }
-        /* event.target: внутренний элемент (всплыло) */
       };
       trigger[i].onmouseout = function (event) {
         console.log(2);
         body[i].style.cssText = "transform:scaleY(0)";
-        if (i == 1) {
-          map.style.cssText = "height: 0;width: 0";
-        }
-        /* event.target: внешний элемент */
       };
     }
   });

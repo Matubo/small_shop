@@ -18,9 +18,7 @@
   width: 25vw;
   border-left: 1px solid #ddd;
 }
-.map_box {
-  margin-bottom: 10px;
-}
+
 iframe {
   height: 0px;
   width: 0px;
