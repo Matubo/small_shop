@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import store from "../store";
-import BasketCheckoutPopupButton from "./popupBasket";
+import BasketCheckoutPopupButton from "../metods/popupBasket";
 import "../../css/basket.css";
 
 function createBasketDOM(basket, sum) {
