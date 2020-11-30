@@ -10,9 +10,7 @@ import "../../css/popUpItem.css";
 function createCardsDom(prodArr) {
   let cardsDOM = [];
   for (let i = 0; i < prodArr.length; i++) {
-    cardsDOM.push(
-      cardDOM(prodArr[i])
-    );
+    cardsDOM.push(cardDOM(prodArr[i]));
   }
   return <div className="product_card_box">{cardsDOM}</div>;
 }
@@ -52,7 +50,7 @@ function App() {
             }
           }}
         >
-          prev
+          {"<-"}
         </button>
         <button
           id="nextButton"
@@ -74,7 +72,7 @@ function App() {
             });
           }}
         >
-          next
+          {"->"}
         </button>
       </div>
     </div>
