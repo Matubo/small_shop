@@ -50,7 +50,7 @@ function App() {
             }
           }}
         >
-          {"<-"}
+          {"<="}
         </button>
         <button
           id="nextButton"
@@ -72,7 +72,7 @@ function App() {
             });
           }}
         >
-          {"->"}
+          {"=>"}
         </button>
       </div>
     </div>

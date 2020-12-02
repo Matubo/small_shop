@@ -8,17 +8,17 @@
   z-index: 1003 !important;
 }
 .popUp_img {
-  height: 15vh;
+  height: 65vh;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
   background-size: auto 100%;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
 }
 .popUp_body {
-  height: 40vh;
+  height: 70vh;
   width: 40vw;
-  top: 50%;
-  right: 50%;
-  background-color: #eee;
+  background-color: #ddd;
   border-radius: 20px;
 }
 .popUp_flex {
@@ -28,9 +28,33 @@
   flex-direction: column;
   justify-content: space-around;
 }
-
+.popUp_about_body {
+  background-color: #eee;
+  border-bottom: 2px solid #eee;
+  border-radius: 0 0 20px 20px;
+}
+.popUp_name {
+  margin-top: 10px;
+}
+.popUp_bottom_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .popUp_name,
 .popUp_info,
 .popUp_price {
   text-align: center;
+}
+.popUp_price {
+  margin: auto;
+}
+.popUp_card_btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.popUp_line {
+  min-height: 100%;
+  background-color: #eee;
+  width: 3px;
 }

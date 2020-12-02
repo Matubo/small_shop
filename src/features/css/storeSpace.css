@@ -31,6 +31,12 @@
 .card-bottom-flex .card-text {
   flex-grow: 2;
 }
+.card-title {
+  margin: auto;
+}
+.card-price {
+  vertical-align: bottom;
+}
 .products_button_box {
   background-color: #eee;
   display: flex;

@@ -84,6 +84,8 @@ iframe {
   width: 50px;
   background-position: center center;
   background-size: auto 100%;
+  border: 2px;
+  border-color: black;
 }
 .social_network_card p {
   text-align: center;
