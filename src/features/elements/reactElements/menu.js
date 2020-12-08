@@ -3,6 +3,14 @@ import React from "react";
 import Basket from "./basket";
 import "../../css/menu.css";
 import basket_img from "../../img/shopping-bag.png";
+import instagram_img from "../../img/instagram.png";
+import vk_img from "../../img/vk.png";
+import facebook_img from "../../img/facebook.png";
+import landline_img from "../../img/landline.png";
+import home_img from "../../img/home.png";
+import time_img from "../../img/time.png";
+import email_img from "../../img/email.png";
+import logo_img from "../../img/logo/logo.png";
 
 function About() {
   return (
@@ -23,7 +31,7 @@ function About() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/instagram.png)`,
+              backgroundImage: `url(${instagram_img})`,
             }}
           ></div>
           <p>net_skyke</p>
@@ -33,7 +41,7 @@ function About() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/vk.png)`,
+              backgroundImage: `url(${vk_img})`,
             }}
           ></div>
           <p>нет_скуке</p>
@@ -43,7 +51,7 @@ function About() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/facebook.png)`,
+              backgroundImage: `url(${facebook_img})`,
             }}
           ></div>
           <p>net_skyke</p>
@@ -63,7 +71,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/landline.png)`,
+              backgroundImage: `url(${landline_img})`,
             }}
           ></div>
           <p>+7-999-777-77-77</p>
@@ -73,7 +81,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/email.png)`,
+              backgroundImage: `url(${email_img})`,
             }}
           ></div>
           <p>support@netskyke.com</p>
@@ -83,7 +91,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/home.png)`,
+              backgroundImage: `url(${home_img})`,
             }}
           ></div>
           <p>СПБ Наб. Обводного канала</p>
@@ -94,7 +102,7 @@ function Contacts() {
           <div
             className="social_network_icon"
             style={{
-              backgroundImage: `url(/images/icon/time.png)`,
+              backgroundImage: `url(${time_img})`,
             }}
           ></div>
           <p>Каждый день</p>
@@ -125,7 +133,7 @@ function Menu() {
       <div className="menu_ident"></div>
       <div className="menu">
         <div className="menu_item logo_box">
-          <img className="menu_logo" src="/images/logo/logo.png"></img>
+          <img className="menu_logo" src={logo_img}></img>
         </div>
         <div className="menu_item transform_trigger">
           <div className="menu_text_box">

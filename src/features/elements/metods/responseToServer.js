@@ -18,7 +18,6 @@ async function getSQLData(id) {
     if (response.ok) {
       //если запрос ок
       json = await response.json(); //ответ парсим из джсон и получаем
-      console.log(json); //выводим ответ //!временно
       return { status: true, data: json };
     } else {
       console.log(`error ${response.status}`);
