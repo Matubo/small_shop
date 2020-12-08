@@ -6,6 +6,7 @@ import "../../css/basket.css";
 
 function createBasketDOM(basket, sum) {
   if (basket.length === 0) {
+    localStorage.removeItem("localOrderArray");
     return <div>Пусто</div>;
   }
   let DOM = [];

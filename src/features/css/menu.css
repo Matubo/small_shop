@@ -18,14 +18,9 @@
   width: 25vw;
   border-left: 1px solid #ddd;
 }
-
-iframe {
-  height: 0px;
-  width: 0px;
-  margin: auto;
-}
-.map_box {
-  height: 150px;
+.about_title {
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .menu_logo {

@@ -8,40 +8,45 @@ function About() {
   return (
     <div className="about_flex column_flex">
       <div>
-        <p>лучший</p>
-        <h4>МАГАЗИН ХРЕНИ</h4>
-        <p>во вселенной</p>
+        <h4 className="about_title">МЫ МАГАЗИН ЗАБАВНЫХ ИГРУШЕК</h4>
         <p>
-          Мы продаем странные игрушки, ваших друзей и наших ****** клиентов.
+          Мы продаем смешные мягкие игрушки<br></br>
+          Это идеальный подарок<br></br>
+          Они изготовлены из гипоаллергенных материалов<br></br>
+          Имеют антистресс эффект
         </p>
       </div>
+      <h4 className="about_title">Наши соц сети</h4>
       <div className="social_network_flex">
         <div className="social_network_card">
+          <h6>Instagram</h6>
           <div
             className="social_network_icon"
             style={{
               backgroundImage: `url(/images/icon/instagram.png)`,
             }}
           ></div>
-          <p>ybei_skyky</p>
+          <p>net_skyke</p>
         </div>
         <div className="social_network_card">
+          <h6>Вконтакте</h6>
           <div
             className="social_network_icon"
             style={{
               backgroundImage: `url(/images/icon/vk.png)`,
             }}
           ></div>
-          <p>убей скуку</p>
+          <p>нет_скуке</p>
         </div>
         <div className="social_network_card">
+          <h6>Facebook</h6>
           <div
             className="social_network_icon"
             style={{
               backgroundImage: `url(/images/icon/facebook.png)`,
             }}
           ></div>
-          <p>ybei_skyky</p>
+          <p>net_skyke</p>
         </div>
       </div>
     </div>
@@ -51,9 +56,10 @@ function About() {
 function Contacts() {
   return (
     <div>
-      <h4>КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
+      <h4 className="about_title">НАША КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
       <div className="about_flex">
         <div className="social_network_card">
+          <h6>Телефон</h6>
           <div
             className="social_network_icon"
             style={{
@@ -63,15 +69,17 @@ function Contacts() {
           <p>+7-999-777-77-77</p>
         </div>
         <div className="social_network_card">
+          <h6>E-mail</h6>
           <div
             className="social_network_icon"
             style={{
               backgroundImage: `url(/images/icon/email.png)`,
             }}
           ></div>
-          <p>support@ybeiskyky.com</p>
+          <p>support@netskyke.com</p>
         </div>
         <div className="social_network_card">
+          <h6>Адрес</h6>
           <div
             className="social_network_icon"
             style={{
@@ -82,6 +90,7 @@ function Contacts() {
           <p>д. 1055 оф. 26 </p>
         </div>
         <div className="social_network_card">
+          <h6>Режим работы</h6>
           <div
             className="social_network_icon"
             style={{
@@ -103,11 +112,9 @@ function Menu() {
     let map = document.querySelector("iframe");
     for (let i = 0; i < trigger.length; i++) {
       trigger[i].onmouseover = function (event) {
-        console.log(1);
         body[i].style.cssText = "transform:scaleY(1)";
       };
       trigger[i].onmouseout = function (event) {
-        console.log(2);
         body[i].style.cssText = "transform:scaleY(0)";
       };
     }
