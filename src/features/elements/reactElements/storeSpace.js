@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 import getSQLData from "../metods/responseToServer";
 import cardDOM from "../metods/cardDOM";
+import reserveCardsTemplate from "../../ifServerIsDown/templateForCards.js";
 
 import "../../css/storeSpace.css";
 import "../../css/popUpItem.css";
@@ -23,7 +24,14 @@ function App() {
       if (resultData.status) {
         setCardsDOM(createCardsDom(resultData.data));
       } else {
-        setCardsDOM(<div>{resultData.data}</div>);
+        setCardsDOM(
+          <div>
+            <div>
+              server is offline? status:{resultData.data}. reserve template used
+            </div>
+            {createCardsDom(reserveCardsTemplate())}
+          </div>
+        );
       }
     });
   }, []);
@@ -44,7 +52,10 @@ function App() {
                   setCardsDOM(createCardsDom(resultData.data));
                   document.getElementById("prevButton").disabled = false;
                 } else {
-                  setCardsDOM(<div>{resultData.data}</div>);
+                  setCardsDOM(
+                    <div>server if offline{resultData.data}</div>
+                    //  setCardsDOM(createCardsDom())
+                  );
                 }
               });
             }

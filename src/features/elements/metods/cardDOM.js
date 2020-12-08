@@ -9,7 +9,7 @@ function CardDOM(prodData) {
       <div
         className="card_img"
         style={{
-          backgroundImage: `url(/images/${prodData["img"]})`,
+          backgroundImage: `url(${prodData["img"]})`,
         }}
       ></div>
       <div className="card-body">

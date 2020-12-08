@@ -3,6 +3,7 @@ import React from "react";
 import store from "../store";
 import BasketCheckoutPopupButton from "../metods/popupBasket";
 import "../../css/basket.css";
+import trash_img from "../../img/trash.png";
 
 function createBasketDOM(basket, sum) {
   if (basket.length === 0) {
@@ -17,7 +18,7 @@ function createBasketDOM(basket, sum) {
           <div
             className="basket_miniature"
             style={{
-              backgroundImage: `url(/images/${basket[i]["img"]})`,
+              backgroundImage: `url(${basket[i]["img"]})`,
             }}
           ></div>
         </td>
@@ -28,7 +29,7 @@ function createBasketDOM(basket, sum) {
           <button
             className="btn btn-light basket_button_trash"
             style={{
-              backgroundImage: `url(/images/icon/trash.png)`,
+              backgroundImage: `url(${trash_img})`,
             }}
             onClick={() => {
               store.dispatch({ type: "REMOVE", remove: basket[i] });

@@ -14,7 +14,7 @@ function CardPopUp(prodData) {
           <div
             className="popUp_img"
             style={{
-              backgroundImage: `url(/images/${prodData["img"]})`,
+              backgroundImage: `url(${prodData["img"]})`,
             }}
           ></div>
           <div className="popUp_about_body">
