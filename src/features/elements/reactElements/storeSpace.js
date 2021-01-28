@@ -27,7 +27,8 @@ function App() {
         setCardsDOM(
           <div>
             <div>
-              server is offline? status:{resultData.data}. reserve template used
+              server is offline? status:{resultData.data}. A fallback template
+              is used. Do not press buttons {"=>"} {"<="}
             </div>
             {createCardsDom(reserveCardsTemplate())}
           </div>

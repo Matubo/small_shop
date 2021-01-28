@@ -51,6 +51,7 @@ function createBasketDOM(basket, sum) {
             className="btn btn-secondary clear_button"
             onClick={() => {
               store.dispatch({ type: "CLEAR_ALL" });
+              
             }}
           >
             Очистить

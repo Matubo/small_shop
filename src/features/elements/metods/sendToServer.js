@@ -13,8 +13,6 @@ async function sendSQLData(name, number, order_data) {
   });
   if (response.ok) {
     json = await response.json(); //ответ парсим из джсон и получаем
-    console.log(json); //выводим ответ
-    console.log(json);
   } else {
     console.log(`error ${response.status}`);
   }
