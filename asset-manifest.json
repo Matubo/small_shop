@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/ReactAndReduxProject_RCApp/static/css/main.f6056b44.chunk.css",
+    "main.js": "/ReactAndReduxProject_RCApp/static/js/main.78a5fa99.chunk.js",
+    "main.js.map": "/ReactAndReduxProject_RCApp/static/js/main.78a5fa99.chunk.js.map",
+    "runtime-main.js": "/ReactAndReduxProject_RCApp/static/js/runtime-main.3a24c803.js",
+    "runtime-main.js.map": "/ReactAndReduxProject_RCApp/static/js/runtime-main.3a24c803.js.map",
+    "static/js/2.8e80c786.chunk.js": "/ReactAndReduxProject_RCApp/static/js/2.8e80c786.chunk.js",
+    "static/js/2.8e80c786.chunk.js.map": "/ReactAndReduxProject_RCApp/static/js/2.8e80c786.chunk.js.map",
+    "index.html": "/ReactAndReduxProject_RCApp/index.html",
+    "precache-manifest.fc52a14ca2d1209f79fc81ae4419f484.js": "/ReactAndReduxProject_RCApp/precache-manifest.fc52a14ca2d1209f79fc81ae4419f484.js",
+    "service-worker.js": "/ReactAndReduxProject_RCApp/service-worker.js",
+    "static/css/main.f6056b44.chunk.css.map": "/ReactAndReduxProject_RCApp/static/css/main.f6056b44.chunk.css.map",
+    "static/js/2.8e80c786.chunk.js.LICENSE.txt": "/ReactAndReduxProject_RCApp/static/js/2.8e80c786.chunk.js.LICENSE.txt",
+    "static/media/avocado.jpg": "/ReactAndReduxProject_RCApp/static/media/avocado.c60d7d2f.jpg",
+    "static/media/banana.webp": "/ReactAndReduxProject_RCApp/static/media/banana.83e3dba3.webp",
+    "static/media/bread.webp": "/ReactAndReduxProject_RCApp/static/media/bread.b16a81fe.webp",
+    "static/media/home.png": "/ReactAndReduxProject_RCApp/static/media/home.6d44b23f.png",
+    "static/media/instagram.png": "/ReactAndReduxProject_RCApp/static/media/instagram.72a4b561.png",
+    "static/media/landline.png": "/ReactAndReduxProject_RCApp/static/media/landline.e30f928e.png",
+    "static/media/logo.png": "/ReactAndReduxProject_RCApp/static/media/logo.df5d5d9f.png",
+    "static/media/muskrat.webp": "/ReactAndReduxProject_RCApp/static/media/muskrat.150da8cb.webp",
+    "static/media/pickle.webp": "/ReactAndReduxProject_RCApp/static/media/pickle.fdee632e.webp",
+    "static/media/rat.jpg": "/ReactAndReduxProject_RCApp/static/media/rat.78de75ac.jpg",
+    "static/media/time.png": "/ReactAndReduxProject_RCApp/static/media/time.477cbd7c.png",
+    "static/media/vk.png": "/ReactAndReduxProject_RCApp/static/media/vk.638ec046.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3a24c803.js",
+    "static/js/2.8e80c786.chunk.js",
+    "static/css/main.f6056b44.chunk.css",
+    "static/js/main.78a5fa99.chunk.js"
+  ]
+}
