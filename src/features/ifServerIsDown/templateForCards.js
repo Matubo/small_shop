@@ -23,7 +23,7 @@ function template() {
       id: i,
       name: `Name#${i}`,
       price: i * 15,
-      img: `./${imgNames[i]}`,
+      img: `${imgNames[i]}`,
       info: `About #${i} about #${i} about #${i} about #${i}`,
     });
   }
