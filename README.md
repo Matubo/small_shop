@@ -1,4 +1,4 @@
-# ReactAndReduxProject_RCApp
+# small_shop
 
 Страница в работе. 
 Модуль формирует страницу с товарами и далее позволяет добавлять их в корзину.
@@ -6,7 +6,7 @@ C рабочим sql и express сервером - данные получают
 По ссылке можно увидеть собранный проект в котором используются резервные данные для заполнения.
 
 ### Ссылка:
- - [matubo.github.io/ReactAndReduxProject_RCApp/](https://matubo.github.io/ReactAndReduxProject_RCApp/)
+ - [matubo.github.io/small_shop/](https://matubo.github.io/small_shop/)
 
 # ReactAndReduxProject_RCApp
 
@@ -16,4 +16,4 @@ With a working sql and express server - data is obtained dynamically and order s
 Following the link, you can see the assembled project that used a reserve data for fill in.
 
 ### Link:
- - [matubo.github.io/ReactAndReduxProject_RCApp/](https://matubo.github.io/ReactAndReduxProject_RCApp/)
+ - [matubo.github.io/small_shop/](https://matubo.github.io/small_shop/)
